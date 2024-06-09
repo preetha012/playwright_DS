@@ -2,18 +2,20 @@ class queuePage{
 
     constructor(page){
         this.page = page;
+        this.queue_getStart = page.locator("a[href='queue']");
         this.imp_array_in_queue = page.getByRole('link', { name: 'Implementation using array' });
         this.tryHere_queue = page.locator('.btn.btn-info');
         this.codeEditor = page.locator(".CodeMirror.cm-s-default");
         this.runBtn_queue = page.getByRole('button', { name: 'Run' });
         this.run_result = page.locator("[id='output']");
         
+    }      
+    async getStartQueue_fn(){
+        await this.queue_getStart.click();
     }
-
     async imp_array_queue_fn(){
         this.imp_array_in_queue.click();
     }
-
     async tryhere_queue_fn(){
         this.tryHere_queue.click();
     }
