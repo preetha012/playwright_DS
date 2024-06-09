@@ -1,6 +1,7 @@
 const {homePage} = require('./homePage');
 const {signinPage} = require('./signinPage');
 const {stacksPage} = require('./stacksPage');
+const {queuePage} = require('./queuePage');
 
 class POManager{
 
@@ -9,6 +10,7 @@ class POManager{
         this.homePage = new homePage(page);
         this.signinPage = new signinPage(page);
         this.stacksPage = new stacksPage(page);
+        this.queuePage = new queuePage(page);
 
     }
 
@@ -22,6 +24,9 @@ getSiginPage(){
 
 getStackPage(){
     return this.stacksPage;
+}
+getQueuePage(){
+    return this.queuePage;
 }
 
 }

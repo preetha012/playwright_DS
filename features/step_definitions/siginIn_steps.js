@@ -2,10 +2,10 @@ const{Given,When,Then} = require('@cucumber/cucumber')
 const {expect} = require('@playwright/test');
 const ExcelUtilities = require('../../utilities/excelReader');
 
-const filepath ='\\Users\\anoop\\Desktop\\Playwright_projects\\testData\\playwrightData.xlsx';
+const filepath ='\\Users\\anoop\\Documents\\NumpyNinja\\Playwright_JS_Projects\\playwright_DS\\testData\\playwrightData.xlsx';
 const Sheetname = 'Sheet1';
 
-    Given('Login to the DSALGO website', async function () {
+    Given('login to the  site', async function () {
     
         this.homepage = this.poManger.getHomePage();
         await this.homepage.goTo();
@@ -23,8 +23,9 @@ const Sheetname = 'Sheet1';
             }
 
         const user = data[0]; // Use the first row
-
+       // const user1 = data[1];
         await this.siginpage.loginfn(user.username_valid,user.password_valid);
+        //await this.LoginPage.login(user1.username,user1.password);
      });
 
      When('enter invalid {string} And {string}', async function (username_invalid, password_invalid) {

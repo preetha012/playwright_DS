@@ -1,7 +1,7 @@
 Feature: Queue Page
 
-Background: Sucessful login functionality
-    Given Login to the DSALGO website 
+ Background: Sucessful login functionality
+    Given login to the  site 
     When Enter valid Username And Password
     Then successfully login
 

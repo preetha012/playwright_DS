@@ -39,7 +39,7 @@ async loged_username_check(){
     return loged_uname;
 }
 
-async algo_dropdwn_fn(Option){
+async option_from_dropDown(Option){
     await this.dropdown_list.click();
     switch(Option.toLowerCase()){
         case "stack":
@@ -57,7 +57,7 @@ async algo_dropdwn_fn(Option){
     
 }
 
-async algos_getstart_fn(Option){
+async option_from_getStart(Option){
     switch(Option.toLowerCase()){
         case "stack":
             this.getStartStack_fn();
