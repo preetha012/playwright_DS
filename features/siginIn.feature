@@ -1,5 +1,6 @@
 Feature: DSALGO Login
 
+@Regression
 Scenario: Sucessful login functionality
     Given  login to the  site 
     When Enter valid Username And Password

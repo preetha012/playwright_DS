@@ -5,7 +5,7 @@ Feature: Stack Page
     When Enter valid Username And Password
     Then successfully login
     
-
+  @Regression
    Scenario: Navigate to Implementation and valid code in TryEditor in Stack page
      Given The user select stack item from Getstarted icon
      Then The user is directed to Stack Page

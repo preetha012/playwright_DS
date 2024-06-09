@@ -5,7 +5,7 @@ Feature: Queue Page
     When Enter valid Username And Password
     Then successfully login
 
-
+  @Regression
   Scenario: Navigate to Implementation of Queue in Python and valid code in TryEditor in Queue page
     Given The user select Queue item from Getstarted icon
     Then The user is directed to Queue Page
