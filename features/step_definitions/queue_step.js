@@ -4,8 +4,8 @@ const {expect} = require('@playwright/test');
 
   //Implementation in Queue page
   Given('The user select Queue item from Getstarted icon', async function () {
-
-      await this.homepage.getStartQueue_fn();
+      this.queuePage = this.poManger.getQueuePage();
+      await this.queuePage.getStartQueue_fn();
 
     });
 
@@ -15,7 +15,7 @@ const {expect} = require('@playwright/test');
 
 
   When('The user clicks on the Implementation using array in Queue link', async function () {
-       this.queuePage = this.poManger.getQueuePage();
+       
        
         await this.queuePage.imp_array_queue_fn();
   });
